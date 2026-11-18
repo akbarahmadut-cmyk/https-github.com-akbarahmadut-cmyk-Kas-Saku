@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Kas Saku</title>
+  <meta name="description" content="Aplikasi pencatatan keuangan pribadi untuk memantau saldo dompet, pemasukan, pengeluaran, dan anggaran bulanan.">
+  <meta property="og:title" content="Kas Saku">
+  <meta property="og:description" content="Aplikasi pencatatan keuangan pribadi untuk memantau saldo dompet, pemasukan, pengeluaran, dan anggaran bulanan.">
+  <meta name="theme-color" content="#EDF2F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#071211" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Kas Saku">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="offline-bar" class="offline-bar wrap" role="status" hidden>
+    <span class="offline-dot" aria-hidden="true"></span>
+    <span>Mode offline — catatan tetap tersimpan aman di perangkat ini.</span>
+  </div>
+  <main id="main" class="wrap"></main>
+  <nav class="tabbar" aria-label="Menu utama"><div class="tabs" id="tabs"></div></nav>
+  <div id="scrim" class="scrim" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Catat transaksi"></div></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <input type="file" id="imp" accept="application/json,.json" hidden>
+  <script src="/vendor/d3.min.js" defer></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>
